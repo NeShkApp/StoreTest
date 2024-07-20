@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "190916836867",
+    "project_id": "storetest-a9610",
+    "storage_bucket": "storetest-a9610.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190916836867:android:723c248e74ff06da7c5836",
+        "android_client_info": {
+          "package_name": "org.bohdan.storetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190916836867-darqrohbm76vdhjct4frm9eb9rulebfp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.bohdan.storetest",
+            "certificate_hash": "9140885b8a6ac31fc513effcb1aaf266ac4b7d9f"
+          }
+        },
+        {
+          "client_id": "190916836867-v3gnuei6ihp8fupcc8tp0nruh92km0im.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnm9HbCLAGS5lyp93L2hTjfbJsK6J8-E8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "190916836867-v3gnuei6ihp8fupcc8tp0nruh92km0im.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
