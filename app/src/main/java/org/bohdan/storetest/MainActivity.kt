@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                 val photoUrl = it.photoUrl
 
                 val userInfo = "Name: $name\nEmail: $email\nPhoto URL: $photoUrl\nPhone Number: $phoneNumber\nCreated: $formattedTimestamp"
-                txtView.text = userInfo
+//                txtView.text = userInfo
             }
 
         }
@@ -130,7 +130,7 @@ class MainActivity : AppCompatActivity() {
                 "https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/2020-Chevrolet-Corvette-Stingray/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=960",
                 "Category 3",
                 true),
-            Product("Semen",
+            Product("Milk",
                 "Milk",
                 30.0,
                 15,

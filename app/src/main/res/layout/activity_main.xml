@@ -20,15 +20,13 @@
         android:id="@+id/recViewAllProducts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:listitem="@layout/item_grocery"/>
+        android:orientation="horizontal" />
 
 
     <TextView
         android:id="@+id/txtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello Pi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">StoreTest</string>
+    <string name="intro_title">Buy Groceries\nEasily With Us</string>
+    <string name="intro_text">Buy food or groceries online\neasily with a phone</string>
 </resources>
