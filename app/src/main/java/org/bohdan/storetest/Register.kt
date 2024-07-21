@@ -52,7 +52,8 @@ class Register : AppCompatActivity() {
         super.onStart()
         val currentUser = auth.currentUser
         if (currentUser != null) {
-            val intent = Intent(this, MainActivity::class.java)
+//            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, NavActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -133,7 +134,9 @@ class Register : AppCompatActivity() {
                         if (user.isEmailVerified) {
                             Toast.makeText(this@Register, "Email verified. You successfully registered.", Toast.LENGTH_SHORT).show()
                             saveUserData(user)
-                            val intent = Intent(this@Register, MainActivity::class.java)
+                            //todo Uncomment this line of code
+//                            val intent = Intent(this@Register, MainActivity::class.java)
+                            val intent = Intent(this@Register, NavActivity::class.java)
                             startActivity(intent)
                             finish()
                         } else {
@@ -200,7 +203,8 @@ class Register : AppCompatActivity() {
                         saveUserData(user)
                     }
                     Toast.makeText(this, "Signed in as ${user?.displayName}", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, MainActivity::class.java))
+//                    startActivity(Intent(this, MainActivity::class.java))
+                    val intent = Intent(this, NavActivity::class.java)
                     finish()
                 } else {
                     Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()

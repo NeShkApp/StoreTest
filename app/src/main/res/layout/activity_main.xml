@@ -22,6 +22,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Best seller products"
+        android:textSize="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recViewBestProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
 
     <TextView
         android:id="@+id/txtView"

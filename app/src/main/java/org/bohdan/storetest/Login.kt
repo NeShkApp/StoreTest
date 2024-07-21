@@ -40,7 +40,8 @@ class Login : AppCompatActivity() {
         super.onStart()
         val currentUser = auth.currentUser
         if (currentUser != null) {
-            val intent = Intent(this, MainActivity::class.java)
+//            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, NavActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -96,7 +97,9 @@ class Login : AppCompatActivity() {
                     progressBar.visibility = View.GONE
                     if (task.isSuccessful) {
                         Toast.makeText(baseContext, "You are signed in successfully", Toast.LENGTH_LONG).show()
-                        val intent = Intent(this, MainActivity::class.java)
+                        //todo uncomment this line of code
+//                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, NavActivity::class.java)
                         startActivity(intent)
                         finish()
                     } else {
@@ -141,7 +144,9 @@ class Login : AppCompatActivity() {
                 if (task.isSuccessful) {
                     val user = auth.currentUser
                     Toast.makeText(this, "Signed in as ${user?.displayName}", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, MainActivity::class.java))
+                        //todo uncomment
+//                    startActivity(Intent(this, MainActivity::class.java))
+                    val intent = Intent(this, NavActivity::class.java)
                     finish()
                 } else {
                     Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
