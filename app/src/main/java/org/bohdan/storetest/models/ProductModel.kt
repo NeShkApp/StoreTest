@@ -1,6 +1,6 @@
-package org.bohdan.storetest
+package org.bohdan.storetest.models
 
-data class Product (
+data class ProductModel (
     val name: String = "",
     val description: String = "",
     val price: Double = 0.0,

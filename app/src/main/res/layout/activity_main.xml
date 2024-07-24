@@ -17,7 +17,7 @@
         android:textSize="20dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recViewAllProducts"
+        android:id="@+id/recViewAllProductsAct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" />
@@ -51,14 +51,14 @@
         android:text="Logout"/>
 
     <Button
-        android:id="@+id/btnAddProducts"
+        android:id="@+id/btnAddProductsAct"
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add Products" />
 
     <Button
-        android:id="@+id/btnDeleteProducts"
+        android:id="@+id/btnDeleteProductsAct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Delete All Products"

@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageCat"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="@drawable/rounded_image_bg"
@@ -15,7 +16,7 @@
         android:src="@mipmap/intro_logo1" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titleCat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="title"

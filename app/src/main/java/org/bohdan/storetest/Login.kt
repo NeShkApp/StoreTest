@@ -147,6 +147,7 @@ class Login : AppCompatActivity() {
                         //todo uncomment
 //                    startActivity(Intent(this, MainActivity::class.java))
                     val intent = Intent(this, NavActivity::class.java)
+                    startActivity(intent)
                     finish()
                 } else {
                     Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()

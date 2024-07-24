@@ -5,18 +5,15 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
-import org.w3c.dom.Text
+import org.bohdan.storetest.adapters.ProductAdapter
+import org.bohdan.storetest.models.ProductModel
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -46,13 +43,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         firestore = FirebaseFirestore.getInstance()
-        recViewAllGroceries = findViewById(R.id.recViewAllProducts)
+        recViewAllGroceries = findViewById(R.id.recViewAllProductsAct)
         recViewAllGroceries.layoutManager =LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         adapterAllGroceries = ProductAdapter(listOf())
         recViewAllGroceries.adapter = adapterAllGroceries
 
-        btnAddProducts = findViewById(R.id.btnAddProducts)
-        btnDeleteProducts = findViewById(R.id.btnDeleteProducts)
+        btnAddProducts = findViewById(R.id.btnAddProductsAct)
+        btnDeleteProducts = findViewById(R.id.btnDeleteProductsAct)
         fetchGroceries()
 
         btnAddProducts.setOnClickListener {
@@ -88,7 +85,7 @@ class MainActivity : AppCompatActivity() {
                 val photoUrl = it.photoUrl
 
                 val userInfo = "Name: $name\nEmail: $email\nPhoto URL: $photoUrl\nPhone Number: $phoneNumber\nCreated: $formattedTimestamp"
-//                txtView.text = userInfo
+                txtView.text = userInfo
             }
 
         }
@@ -99,7 +96,7 @@ class MainActivity : AppCompatActivity() {
         firestore.collection("products")
             .get()
             .addOnSuccessListener { result ->
-                val products = result.toObjects(Product::class.java)
+                val products = result.toObjects(ProductModel::class.java)
                 adapterAllGroceries.updateProducts(products)
             }
             .addOnFailureListener { exception ->
@@ -116,35 +113,35 @@ class MainActivity : AppCompatActivity() {
 
     private fun addProducts() {
         val products = listOf(
-            Product("Ice Cream",
+            ProductModel("Ice Cream",
                 "Description 1",
                 10.0,
                 10,
                 "https://upload.wikimedia.org/wikipedia/commons/d/da/Strawberry_ice_cream_cone_%285076899310%29.jpg",
                 "Category 1",
                 false),
-            Product("Car",
+            ProductModel("Car",
                 "Description 2",
                 20.0,
                 20,
                 "https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/2020-Chevrolet-Corvette-Stingray/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=960",
                 "Category 3",
                 true),
-            Product("Milk",
+            ProductModel("Milk",
                 "Milk",
                 30.0,
                 15,
                 "https://as1.ftcdn.net/v2/jpg/01/06/68/88/1000_F_106688812_rVoRFXazgIMEUJdvffG9p0XvP8Lntf0a.jpg",
                 "Category 2",
                 false),
-            Product("Apple",
+            ProductModel("Apple",
                 "Description 4",
                 40.0,
                 20,
                 "https://static.wikia.nocookie.net/fruits-information/images/2/2b/Apple.jpg/revision/latest?cb=20180802112257",
                 "Category 2",
                 true),
-            Product("Oculus hand",
+            ProductModel("Oculus hand",
                 "Oculus hand",
                 50.0,
                 8,

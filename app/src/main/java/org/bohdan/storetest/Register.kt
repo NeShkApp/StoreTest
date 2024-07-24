@@ -205,6 +205,7 @@ class Register : AppCompatActivity() {
                     Toast.makeText(this, "Signed in as ${user?.displayName}", Toast.LENGTH_SHORT).show()
 //                    startActivity(Intent(this, MainActivity::class.java))
                     val intent = Intent(this, NavActivity::class.java)
+                    startActivity(intent)
                     finish()
                 } else {
                     Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
